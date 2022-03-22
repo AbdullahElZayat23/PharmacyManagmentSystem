@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../Images/icon.jfif" rel="icon">
+    <link href="../CSS/HomePage.css" rel="stylesheet" type="text/css">
+    <script defer src="../Script/Md5hashing.js"></script>
+    <script defer src="../Script/Takeimage.js"></script>
+    <script defer src="../Script/HomePage.js"></script>
+    <title>Home Page</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="welmsg">Welcome to Home Page, <span id="currentuser"> </span></h1>
+    </header>
+
+    <div id="controls">
+        <button class="button1" onclick="additem()"> Add new item</button>
+        <button class="button4" id="addus" onclick="Adduser()"> Add new user</button>
+        <button class="button2" onclick="deleteitem()"> Delete item</button>
+        <button class="button3" onclick="Makeinvoice()"> Make invoice</button>
+        <button class="button3" onclick="showitems()"> Show items</button>
+        <button class="button2" onclick="logout()"> Log out</button>
+    </div><br>
+    <!--Show items section-->
+    <table id="Showitems">
+        <thead>
+            <th>Item id</th>
+            <th>Item name</th>
+            <th>Item quantity</th>
+            <th>Item Picture</th>
+            <th>Controls</th>
+        </thead>
+
+        <tbody id="itemsTableBody">
+
+        </tbody>
+    </table>
+    <!--Show items section-->
+
+    <!--Add user section-->
+    <div id="adduserfrom">
+        <form>
+            <p id="msg"></p>
+            <label for="username">Enter user's username</label>
+            <input id="username" type="text"><br>
+            <label for="password">Enter user's password</label>
+            <input id="password" type="password">
+            <label for="password">Re-enter user's password</label>
+            <input id="Repassword" type="password">
+            <input type="button" value="Save" onclick="SaveUserData()">
+        </form>
+    </div>
+    <!--Add user section-->
+
+    <!--Add item section-->
+    <form id="additem">
+
+        <label for="itemid">Item ID*</label>
+        <input id="itemid" type="text" onkeydown="changeitemmsg()">
+
+        <label for="itemname">Item name*</label>
+        <input id="itemname" type="text" onkeydown="changeitemmsg()">
+
+        <label for="itemquantity">Item quantity*</label>
+        <input id="itemquantity" type="number" onkeydown="changeitemmsg()">
+        <br>
+        <!--<label for="picture">Item picture*</label>
+        <input type="button" value="Take picture" onclick="startCamera()">
+        -->
+        <input id="savebtn" type="button" value="Save" onclick="saveitem()">
+        <input id="saveeditedbtn" type="button" value="Save edited item" onclick="SaveEditedItem()">
+        <p id="itemMsg"></p>
+
+        <!-- video capture-->
+        <div id="container">
+            <video autoplay="true" id="videoElement"></video>
+            <input type="button" onclick="startCamera()" id="Start" value="Start Camera">
+            <input type="button" onclick="stopcamera()" id="stop" value="Stop Video">
+            <input type="button" onclick="takescreenshot()" id="screen" value="Take ScreenShot">
+            <canvas id="showscreenshot" style="display: none;"></canvas>
+            <img id="showscreenshotimg">
+        </div>
+        <!--video capture-->
+
+    </form>
+    <!--Add item section-->
+
+    <!--delete item section-->
+    <form id="itemtodeleteform">
+        <label for="itemtodelete">Enter the ID of item you want to delete:</label>
+        <input id="itemtodelete" type="number" onkeyup="GetitemToDeleteInfo()">
+        <input type="button" value="Delete" onclick="ConfirmDelete()" id="deletebtn">
+        <p id="itemToDeleteInfo"></p>
+    </form>
+    <!--delete item section-->
+
+    <!--Make invoice section-->
+
+    <form id="invoice">
+        <label for="invoicnumber">Invoice number*</label>
+        <input id="invoicnumber" type="text">
+
+        <label for="invoiceDate">Date*</label>
+        <input id="invoiceDate" type="date">
+
+        <label for="Customername">Customer name*</label>
+        <input id="Customername" type="text">
+
+        <label for="Processtype">( Buy</label>
+        <input id="Buy" type="radio" value="buy" name="Processtype">
+
+        <label for="Processtype">Sell</label>
+        <input id="Sell" type="radio" value="sell" name="Processtype"><span> )* </span>
+        <div style="border: 2px solid black;padding: 5px;margin: 10px;">
+            <label for="item">Item name*</label>
+            <select name="Item" id="item">
+                <option selected disabled></option>
+            </select>
+
+            <label for="itemquantity">Item quantity*</label>
+            <input id="itemquantitytoadd" type="number">
+            <input type="button" value="Add item to invoice" onclick="showItemsData()"></div>
+        <input type="button" id="SaveInvoiceBtn" value="Save invoice" onclick="saveinvoice()">
+        <p id="itemsadded">Items in invoice:</p>
+    </form>
+    <!--Make invoice section-->
+</body>
+
+</html>

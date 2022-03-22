@@ -1,0 +1,246 @@
+header {
+    width: 100%;
+    height: 200px;
+    border: 2px solid #000;
+    margin: 0;
+    background-image: url(../Images/background.jfif)
+}
+
+body {
+    background-color: azure
+}
+
+#msg {
+    color: red
+}
+
+#adduserfrom,
+#welmsg {
+    display: flex;
+    justify-content: center
+}
+
+#adduserfrom {
+    border: 1px solid #000;
+    width: 400px;
+    height: 350px;
+    display: none;
+    margin-top: 0;
+    transform: translate(150%, 10%)
+}
+
+#adduserfrom input[type=button] {
+    margin-top: 20px;
+    margin-left: 35%
+}
+
+#adduserfrom form {
+    margin-left: 10px
+}
+
+#adduserfrom input {
+    font-size: 30px
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h1 {
+    font-size: 50px
+}
+
+button,
+div {
+    font-size: 25px
+}
+
+#welmsg {
+    margin-top: 5%
+}
+
+.button1,
+.button4 {
+    background-color: #4caf50
+}
+
+.button2 {
+    background-color: #f44336
+}
+
+.button3 {
+    background-color: #e7e7e7;
+    color: #000
+}
+
+button {
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 60px;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-evenly
+}
+
+#controls button:hover {
+    background-color: #f0f8ff;
+    border: 2px dashed
+}
+
+#Showitems {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 30px;
+    display: none
+}
+
+#Showitems td {
+    padding: 8px
+}
+
+#Showitems td,
+#Showitems th {
+    border: 1px solid #ddd
+}
+
+#Showitems tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+#Showitems tr:hover {
+    background-color: #ddd
+}
+
+#Showitems th {
+    padding: 12px 8px;
+    text-align: left;
+    background-color: #d80e51;
+    color: #fff
+}
+
+#additem,
+#additem button,
+#additem input {
+    font-size: 30px
+}
+
+#Showitems td {
+    width: 500px;
+    text-align: center
+}
+
+table img {
+    width: 100px;
+    height: 100px
+}
+
+table img:hover {
+    transform: scale(3)
+}
+
+#additem {
+    display: none;
+    margin-top: 50px
+}
+
+#savebtn,
+#saveeditedbtn {
+    background-color: #0cc434;
+    border-radius: 5px;
+    display: flex;
+    transform: translateX(990%);
+    margin-top: 5px
+}
+
+#saveeditedbtn {
+    transform: translateX(300%)
+}
+
+#itemMsg {
+    color: red
+}
+
+#container {
+    width: 700px;
+    height: 375px;
+    border: 10px #202016 solid;
+    border-radius: 10px;
+    margin: 0 auto 0 30px
+}
+
+#videoElement {
+    width: 700px;
+    height: 375px;
+    background-color: #808e91
+}
+
+#Start,
+#screen,
+#stop {
+    font-size: large;
+    color: #f5f5f5;
+    border-radius: 5px
+}
+
+#showscreenshotimg {
+    transform: translate(250%, -130%);
+    width: 400px;
+    height: 300px;
+    border: 5px solid #000
+}
+
+#stop {
+    background-color: red
+}
+
+#screen {
+    background-color: #2368ce
+}
+
+#Start {
+    background-color: #11da4d
+}
+
+#itemtodeleteform,
+#itemtodeleteform input,
+#itemtodeleteform input[type=button] {
+    font-size: 30px;
+    margin-top: 10px
+}
+
+#invoice,
+#itemtodeleteform {
+    display: none
+}
+
+#itemtodeleteform input[type=button] {
+    background-color: red;
+    border-radius: 10px
+}
+
+#invoice,
+#invoice input,
+#invoice option {
+    font-size: 20px
+}
+
+#invoice input[type=button] {
+    background-color: #06b15b;
+    border-radius: 10px
+}
+
+#invoice select {
+    width: 200px;
+    height: 30px
+}
+
+#invoice input {
+    margin-top: 10px
+}
+
+#invoice input[type=radio] {
+    transform: scale(2)
+}
